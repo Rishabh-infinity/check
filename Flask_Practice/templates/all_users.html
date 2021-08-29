@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %} All Submissions {% endblock %}
+
+{% block content %}
+
+<div class="jumbotron">
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+        <th scope="col">Email</th>
+        <th scope="col">Name</th>
+        <th scope="col">City</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for value in users %}
+    <tr>
+
+      <td>{{value.to_tuple()[0]}}</td>
+        <td>{{value.to_tuple()[1]}}</td>
+        <td>{{value.to_tuple()[2]}}</td>
+
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+</div>
+
+{% endblock %}

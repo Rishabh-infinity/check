@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %} Registered {{ data["username"] }} {% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      {% for key in data.keys() %}
+        <th scope="col">{{key.capitalize()}}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr>
+      {% for value in data.values() %}
+      <td>{{value}}</td>
+      {% endfor %}
+    </tr>
+
+  </tbody>
+</table>
+</div>
+{% endblock %}
