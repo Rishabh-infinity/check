@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %} Cookie Set {% endblock %}
+
+{% block content %}
+<h1>
+    Your cookie has been set!
+</h1>
+<a href={{url_for("user_cookie")}}>See my Cookie</a>
+{% endblock %}
