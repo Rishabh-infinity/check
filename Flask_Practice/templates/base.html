@@ -24,7 +24,11 @@
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href={{url_for("index")}}>Home</a>
         <a class="nav-link" href={{url_for("form")}}>Form</a>
-        <a class="nav-link" href={{url_for("all_users")}}>Submissions</a>
+          {% if isLogin %}
+          <a class="nav-link" href={{url_for("logout")}}>Logout</a>
+          {% else %}
+          <a class="nav-link" href={{url_for("login")}}>Login</a>
+          {% endif %}
       </div>
     </div>
   </div>
