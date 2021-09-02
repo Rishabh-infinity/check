@@ -7,6 +7,7 @@ app = Flask(__name__)
 app.secret_key = "any random string"
 app.permanent_session_lifetime = timedelta(minutes=1)
 
+
 @app.route("/")
 def index():
     if 'username' in session:
